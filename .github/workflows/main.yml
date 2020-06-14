@@ -11,10 +11,11 @@ jobs:
     - uses: actions/checkout@v2.1.0
       with:
         fetch-depth: 2
-    - name: Install-gem
-      run: sudo gem install sass
-    - name: Compile-Bulma
-      run: sass --sourcemap=none ./css/bulma.scss:./css/bulma.css && echo Ran bulma compile
+    - name: Compile-CSS
+      uses: gha-utilities/sass-build@v0.2.5
+      with:
+        source: css/bulma.scss
+        destination: css/bulma.css
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
