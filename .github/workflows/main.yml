@@ -12,7 +12,7 @@ jobs:
       with:
         fetch-depth: 2
     - name: Build-Bulma-CSS
-      run: gem install sass && sass --sourcemap=none css/bulma.scss:css/bulma.css
+      run: sudo gem install sass && sass --sourcemap=none css/bulma.scss:css/bulma.css
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
