@@ -14,8 +14,8 @@ jobs:
     - name: Compile-CSS
       uses: gha-utilities/sass-build@v0.2.5
       with:
-        source: css/bulma.scss
-        destination: css/bulma.css
+        source: _css/bulma.scss
+        destination: /css/bulma.css
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
