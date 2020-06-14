@@ -25,3 +25,4 @@ jobs:
         ftp-username: ubuntu
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         known-hosts: ${{ secrets.FTP_KNOWN_HOSTS }}
+        git-ftp-args: --all
